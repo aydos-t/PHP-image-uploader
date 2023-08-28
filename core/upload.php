@@ -14,13 +14,15 @@ $maxSize = 1;
 if ($fileSize > $maxSize) {
     die('Incorrect file size');
 }
-?>
 
-<pre>
-    <?php print_r($image); ?>
-</pre>
+// ?>
 
-<?php 
+// <pre>
+//     <?php print_r($image); ?>
+// </pre>
+
+// <?php 
+
 if (!is_dir('../uploads')) {
     mkdir('../uploads', 0777, true);
 }
@@ -28,5 +30,7 @@ if (!is_dir('../uploads')) {
 $extension = pathinfo($image["name"], PATHINFO_EXTENSION);
 $fileName = time() . ".$extension";
 
-move_uploaded_file($image["tmp_name"] , "../uploads/" . $fileName)
+move_uploaded_file($image["tmp_name"], "../uploads/" . $fileName);
+
+echo "Image successfully uploaded!";
 ?>
