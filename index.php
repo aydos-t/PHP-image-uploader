@@ -15,17 +15,8 @@
     }
 </style>
 <body>
-    <h2>Single Upload</h2>
     <form action="core/upload.php" method="POST" enctype="multipart/form-data">
         <input type="file" name="image">
-        <button type="submit">Upload</button>
-    </form>
-
-    <h2>Multi Upload</h2>
-    <form action="core/multiUpload.php" method="POST" enctype="multipart/form-data"l>
-        <input type="file" name="images">
-        <input type="file" name="images">
-        <input type="file" name="images">
         <button type="submit">Upload</button>
     </form>
 </body>
