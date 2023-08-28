@@ -8,20 +8,21 @@ if (!in_array($image["type"], $types)) {
     die('Incorrect file type');
 }
 
-$fileSize = $image["size"] / 1000000;
-$maxSize = 1;
+$fileSize = $image["size"] / 3000000;
+$maxSize = 3;
 
 if ($fileSize > $maxSize) {
     die('Incorrect file size');
 }
 
-// ?>
+/* ?>
 
-// <pre>
-//     <?php print_r($image); ?>
-// </pre>
+ <pre>
+     <?php print_r($image); ?>
+ </pre>
 
-// <?php 
+ <?php 
+*/
 
 if (!is_dir('../uploads')) {
     mkdir('../uploads', 0777, true);
